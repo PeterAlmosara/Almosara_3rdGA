@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="random"></div>
+    <div id="prnt"></div>
+    <div id="date"></div> 
+</body>
+<script>
+    function generator() {
+
+    var randM = Math.floor(Math.random() * 1001);
+    var a = Math.floor((randM/100)%100);
+    var ba = Math.floor(a*100)
+    var c = Math.floor((randM / 10) % 10);
+    var dc = Math.floor(c*10)
+    var e = randM % 10;
+
+    document.getElementById("random").innerText = "Randomly generated number: " + randM;
+    document.getElementById("prnt").innerText = "Breakdown: " + ba + ", " + dc + ", " + e;
+
+    document.getElementById("date").innerText = "" + new Date();
+}
+generator();
+    </script>
+</html>
